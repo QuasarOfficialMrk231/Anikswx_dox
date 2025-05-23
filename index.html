@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Защищенный контент | QuasarOfficial</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .protected-content {
+            margin: 20px 0;
+            padding: 15px;
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            position: relative;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+        .contact-info {
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #666;
+            text-align: center;
+        }
+        .copyright {
+            margin-top: 20px;
+            font-size: 0.8em;
+            color: #999;
+            text-align: center;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Блокировка контекстного меню
+            document.addEventListener('contextmenu', function(e) {
+                e.preventDefault();
+                alert('Копирование запрещено!');
+            });
+            
+            // Блокировка сочетаний клавиш
+            document.addEventListener('keydown', function(e) {
+                // Ctrl+C, Ctrl+A, Ctrl+X и т.д.
+                if (e.ctrlKey && (e.keyCode === 67 || e.keyCode === 65 || e.keyCode === 88 || e.keyCode === 85)) {
+                    e.preventDefault();
+                    alert('Копирование запрещено!');
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Контактная информация</h1>
+        
+        <div class="protected-content">
+            <h3>Основные контакты:</h3>
+            <p>1. TikTok: @anixwx_rbx</p>
+            <p>2. Telegram: <a href="https://t.me/anixwx_rbx" target="_blank">https://t.me/anixwx_rbx</a></p>
+            <p>3. Номер телефона: +79039877561</p>
+            <p>4. WhatsApp: <a href="https://wa.me/+79039877561" target="_blank">https://wa.me/+79039877561</a></p>
+            <p>5. ФИО: Мысов Олег</p>
+        </div>
+        
+        <div class="copyright">
+            <p>CREATED AND COLLECTED BY QUASAROFFICIALMRK231 (ARTEM_KOKUSRHIN)</p>
+        </div>
+    </div>
+</body>
+</html>
